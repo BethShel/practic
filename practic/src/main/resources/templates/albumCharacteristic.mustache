@@ -1,0 +1,35 @@
+<html>
+<body>
+<button><form action="/" method="get">
+    <input type="submit" value="Main menu"/>
+</form></button>
+<button><li><a href="/albumCharacteristic">Back</a></li></button>
+<div>
+    <form method="post">
+        <input type="text" name="name" placeholder="Add name"/>
+        <input type="text" name="date" placeholder="Add date"/>
+        <input type="text" name="style" placeholder="Add style"/>
+        <input type="text" name="countTracks" placeholder="Add count of tracks"/>
+        <input type="text" name="length" placeholder="Add length"/>
+        <input type="text" name="carrierType" placeholder="Add type of carrier"/>
+        <button type="submit">Add</button>
+    </form>
+</div>
+<div>Albums List</div>
+<form method="post" action="albumFilter">
+    <input type="text" name="filter">
+    <button type="submit">Find</button>
+</form>
+{{#characteristics}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{name}}</span>
+        <i>{{date}}</i>
+        <b>{{style}}</b>
+        <span>{{countTracks}}</span>
+        <i>{{length}}</i>
+        <b>{{carrierType}}</b>
+    </div>
+{{/characteristics}}
+</body>
+</html>

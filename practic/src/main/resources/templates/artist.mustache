@@ -1,0 +1,33 @@
+<html>
+<body>
+<button><form action="/" method="get">
+    <input type="submit" value="Main menu"/>
+</form></button>
+<button><li><a href="/artist">Back</a></li></button>
+<div>
+    <form method="post">
+        <input type="text" name="name" placeholder="Add name"/>
+        <input type="text" name="surname" placeholder="Add surname"/>
+        <input type="text" name="birthdate" placeholder="Add birthdate"/>
+        <input type="text" name="deathdate" placeholder="Add deathdate"/>
+        <input type="text" name="style" placeholder="Add style"/>
+        <button type="submit">Add</button>
+    </form>
+</div>
+<div>Artists List</div>
+<form method="post" action="artistFilter">
+    <input type="text" name="filter">
+    <button type="submit">Find</button>
+</form>
+{{#characteristics}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{name}}</span>
+        <i>{{surname}}</i>
+        <b>{{birthdate}}</b>
+        <span>{{deathdate}}</span>
+        <i>{{style}}</i>
+    </div>
+{{/characteristics}}
+</body>
+</html>

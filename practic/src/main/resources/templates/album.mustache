@@ -1,0 +1,26 @@
+<html>
+<body>
+<button><form action="/" method="get">
+    <input type="submit" value="Main menu"/>
+</form></button>
+<div>
+    <form method="post">
+        <input type="int" name="songID" placeholder="Add songID"/>
+        <input type="int" name="characteristicID" placeholder="Add characteristicID"/>
+        <button type="submit">Add</button>
+    </form>
+</div>
+<div>Albums List</div>
+<div>
+    <b>id</b>
+    <span>songID</span>
+    <i>characteristicID</i>
+</div>{{#albums}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{songID}}</span>
+        <i>{{characteristicID}}</i>
+    </div>
+{{/albums}}
+</body>
+</html>

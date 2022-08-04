@@ -1,0 +1,26 @@
+<html>
+<body>
+<button><form action="/" method="get">
+    <input type="submit" value="Main menu"/>
+</form></button>
+<button><li><a href="/style">Back</a></li></button>
+
+<div>
+    <form method="post">
+        <input type="text" name="name" placeholder="Add name"/>
+        <button type="submit">Add</button>
+    </form>
+</div>
+<div>Style List</div>
+<form method="post" action="styleFilter">
+    <input type="text" name="filter">
+    <button type="submit">Find</button>
+</form>
+{{#characteristics}}s
+    <div>
+        <b>{{id}}</b>
+        <span>{{name}}</span>
+    </div>
+{{/characteristics}}
+</body>
+</html>
